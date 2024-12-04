@@ -1,0 +1,39 @@
+https://www.kaggle.com/datasets/vivek468/superstore-dataset-final
+
+CREATE DATABASE postgre
+    WITH OWNER = my_user
+    ENCODING = 'UTF8'
+    CONNECTION LIMIT = 100;
+
+CREATE TABLE table_m3 (
+    Row ID SERIAL PRIMARY KEY,
+    Order ID SERIAL PRIMARY KEY,
+    Order Date DATE,
+    Ship Date DATE,
+    Ship Mode VARCHAR(30),
+    customer_segment VARCHAR(30),
+    Customer ID SERIAL PRIMARY KEY,
+    Customer Name VARCHAR(30),
+    Segment VARCHAR(30),
+    Country VARCHAR(30),
+    City VARCHAR(30),
+    State VARCHAR(30),
+    Postal Code INT,
+    Region VARCHAR(30),
+    Product ID SERIAL PRIMARY KEY,
+    Category VARCHAR(30),
+    Sub-Category VARCHAR(30),
+    Product Name VARCHAR(30),
+    Sales DECIMAL(12, 2),
+    Quantity INT,
+    Discount DECIMAL(12, 2),
+    Profit DECIMAL(12, 2)
+);
+
+COPY table_m3(Row ID, Order ID, Order Date, Ship Date, Ship Mode,
+       Customer ID, Customer Name, Segment, Country, City, State,
+       Postal Code, Region, Product ID, Category, Sub-Category,
+       Product Name, Sales, Quantity, Discount, Profit)
+FROM 'C:/Users/mnuzu/Downloads/Hacktiv/03_Phase_02/airflow/DEBlitz/MLPipeline/data/data.csv' 
+DELIMITER ',' 
+CSV HEADER;
