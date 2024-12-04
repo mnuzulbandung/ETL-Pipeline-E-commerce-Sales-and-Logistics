@@ -87,4 +87,4 @@ The Kibana, which we used for data analysis, can not analyse whether the shipmen
 ## **Author**
 
 M Nuzul  
-LinkedIn: [M NUzul](https://www.linkedin.com/in/m-nuzul/)
+LinkedIn: [M Nuzul](https://www.linkedin.com/in/m-nuzul/)
